@@ -14,10 +14,10 @@ C:\Users\Termina1\OneDrive - Durham College\Semester2\NETD\NETD2202_Lab4_TylerSe
 C:\Users\Termina1\OneDrive - Durham College\Semester2\NETD\NETD2202_Lab4_TylerSegovia\NETD2202_Lab4\CustomerList\CustomerList\bin\Debug\CustomerList.pdb
 C:\Users\Termina1\OneDrive - Durham College\Semester2\NETD\NETD2202_Lab4_TylerSegovia\NETD2202_Lab4\CustomerList\CustomerList\bin\Debug\CustomerList.xml
 C:\Users\Termina1\OneDrive - Durham College\Semester2\NETD\NETD2202_Lab4_TylerSegovia\NETD2202_Lab4\CustomerList\CustomerList\obj\Debug\CustomerList.vbprojAssemblyReference.cache
-C:\Users\Termina1\OneDrive - Durham College\Semester2\NETD\NETD2202_Lab4_TylerSegovia\NETD2202_Lab4\CustomerList\CustomerList\obj\Debug\CustomerList.frmCustomerList.resources
 C:\Users\Termina1\OneDrive - Durham College\Semester2\NETD\NETD2202_Lab4_TylerSegovia\NETD2202_Lab4\CustomerList\CustomerList\obj\Debug\CustomerList.Resources.resources
 C:\Users\Termina1\OneDrive - Durham College\Semester2\NETD\NETD2202_Lab4_TylerSegovia\NETD2202_Lab4\CustomerList\CustomerList\obj\Debug\CustomerList.vbproj.GenerateResource.cache
 C:\Users\Termina1\OneDrive - Durham College\Semester2\NETD\NETD2202_Lab4_TylerSegovia\NETD2202_Lab4\CustomerList\CustomerList\obj\Debug\CustomerList.vbproj.CoreCompileInputs.cache
 C:\Users\Termina1\OneDrive - Durham College\Semester2\NETD\NETD2202_Lab4_TylerSegovia\NETD2202_Lab4\CustomerList\CustomerList\obj\Debug\CustomerList.exe
 C:\Users\Termina1\OneDrive - Durham College\Semester2\NETD\NETD2202_Lab4_TylerSegovia\NETD2202_Lab4\CustomerList\CustomerList\obj\Debug\CustomerList.xml
 C:\Users\Termina1\OneDrive - Durham College\Semester2\NETD\NETD2202_Lab4_TylerSegovia\NETD2202_Lab4\CustomerList\CustomerList\obj\Debug\CustomerList.pdb
+C:\Users\Termina1\OneDrive - Durham College\Semester2\NETD\NETD2202_Lab4_TylerSegovia\NETD2202_Lab4\CustomerList\CustomerList\obj\Debug\CustomerList.frmCarInventory.resources
