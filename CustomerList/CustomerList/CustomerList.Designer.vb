@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmCustomerList
+Partial Class frmCarInventory
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -34,20 +34,24 @@ Partial Class frmCustomerList
         Me.lbLastName = New System.Windows.Forms.Label()
         Me.chkVIP = New System.Windows.Forms.CheckBox()
         Me.lvwCustomers = New System.Windows.Forms.ListView()
-        Me.colVIP = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.colNew = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.colID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.colTitle = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.colFirstName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.colLastName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.colMake = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.colModel = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.colYear = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.CustomerToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.lbResult = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.colPrice = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'btnEnter
         '
-        Me.btnEnter.Location = New System.Drawing.Point(95, 422)
+        Me.btnEnter.Location = New System.Drawing.Point(127, 555)
+        Me.btnEnter.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEnter.Name = "btnEnter"
-        Me.btnEnter.Size = New System.Drawing.Size(75, 23)
+        Me.btnEnter.Size = New System.Drawing.Size(100, 28)
         Me.btnEnter.TabIndex = 9
         Me.btnEnter.Text = "&Enter"
         Me.CustomerToolTip.SetToolTip(Me.btnEnter, "Click to add a customer.")
@@ -56,9 +60,10 @@ Partial Class frmCustomerList
         'btnReset
         '
         Me.btnReset.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnReset.Location = New System.Drawing.Point(176, 422)
+        Me.btnReset.Location = New System.Drawing.Point(235, 555)
+        Me.btnReset.Margin = New System.Windows.Forms.Padding(4)
         Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(75, 23)
+        Me.btnReset.Size = New System.Drawing.Size(100, 28)
         Me.btnReset.TabIndex = 10
         Me.btnReset.Text = "&Reset"
         Me.CustomerToolTip.SetToolTip(Me.btnReset, "Click to reset the screen.")
@@ -66,9 +71,10 @@ Partial Class frmCustomerList
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(257, 422)
+        Me.btnExit.Location = New System.Drawing.Point(343, 555)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(75, 23)
+        Me.btnExit.Size = New System.Drawing.Size(100, 28)
         Me.btnExit.TabIndex = 11
         Me.btnExit.Text = "E&xit"
         Me.CustomerToolTip.SetToolTip(Me.btnExit, "Click to exit the application.")
@@ -76,122 +82,164 @@ Partial Class frmCustomerList
         '
         'tbFirstName
         '
-        Me.tbFirstName.Location = New System.Drawing.Point(84, 34)
+        Me.tbFirstName.Location = New System.Drawing.Point(112, 42)
+        Me.tbFirstName.Margin = New System.Windows.Forms.Padding(4)
         Me.tbFirstName.Name = "tbFirstName"
-        Me.tbFirstName.Size = New System.Drawing.Size(121, 20)
+        Me.tbFirstName.Size = New System.Drawing.Size(160, 22)
         Me.tbFirstName.TabIndex = 3
-        Me.CustomerToolTip.SetToolTip(Me.tbFirstName, "Type the customer's first name here.")
+        Me.CustomerToolTip.SetToolTip(Me.tbFirstName, "Type the car's model here.")
         '
         'tbLastName
         '
-        Me.tbLastName.Location = New System.Drawing.Point(84, 60)
+        Me.tbLastName.Location = New System.Drawing.Point(112, 106)
+        Me.tbLastName.Margin = New System.Windows.Forms.Padding(4)
         Me.tbLastName.Name = "tbLastName"
-        Me.tbLastName.Size = New System.Drawing.Size(121, 20)
+        Me.tbLastName.Size = New System.Drawing.Size(160, 22)
         Me.tbLastName.TabIndex = 5
-        Me.CustomerToolTip.SetToolTip(Me.tbLastName, "Type the customer's last name here.")
+        Me.CustomerToolTip.SetToolTip(Me.tbLastName, "Type the car's price here.")
         '
         'cmbTitles
         '
         Me.cmbTitles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbTitles.FormattingEnabled = True
         Me.cmbTitles.Items.AddRange(New Object() {"Mr.", "Mrs.", "Miss.", "Ms.", "Mstr.", "Dr."})
-        Me.cmbTitles.Location = New System.Drawing.Point(84, 7)
+        Me.cmbTitles.Location = New System.Drawing.Point(112, 9)
+        Me.cmbTitles.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbTitles.Name = "cmbTitles"
-        Me.cmbTitles.Size = New System.Drawing.Size(121, 21)
+        Me.cmbTitles.Size = New System.Drawing.Size(160, 24)
         Me.cmbTitles.TabIndex = 1
-        Me.CustomerToolTip.SetToolTip(Me.cmbTitles, "Select the customer's title.")
+        Me.CustomerToolTip.SetToolTip(Me.cmbTitles, "Select the car's make.")
         '
         'lbTitle
         '
-        Me.lbTitle.Location = New System.Drawing.Point(12, 7)
+        Me.lbTitle.Location = New System.Drawing.Point(16, 9)
+        Me.lbTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbTitle.Name = "lbTitle"
-        Me.lbTitle.Size = New System.Drawing.Size(66, 13)
+        Me.lbTitle.Size = New System.Drawing.Size(88, 16)
         Me.lbTitle.TabIndex = 0
-        Me.lbTitle.Text = "&Title: "
+        Me.lbTitle.Text = "&Make: "
         Me.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblFirstName
         '
-        Me.lblFirstName.Location = New System.Drawing.Point(12, 34)
+        Me.lblFirstName.Location = New System.Drawing.Point(16, 42)
+        Me.lblFirstName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(66, 13)
+        Me.lblFirstName.Size = New System.Drawing.Size(88, 16)
         Me.lblFirstName.TabIndex = 2
-        Me.lblFirstName.Text = "&First Name: "
+        Me.lblFirstName.Text = "M&odel: "
         Me.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.lblFirstName.UseWaitCursor = True
         '
         'lbLastName
         '
-        Me.lbLastName.Location = New System.Drawing.Point(12, 63)
+        Me.lbLastName.Location = New System.Drawing.Point(16, 110)
+        Me.lbLastName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbLastName.Name = "lbLastName"
-        Me.lbLastName.Size = New System.Drawing.Size(66, 13)
+        Me.lbLastName.Size = New System.Drawing.Size(88, 16)
         Me.lbLastName.TabIndex = 4
-        Me.lbLastName.Text = "&Last Name: "
+        Me.lbLastName.Text = "&Price: "
         Me.lbLastName.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'chkVIP
         '
         Me.chkVIP.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.chkVIP.Location = New System.Drawing.Point(51, 83)
+        Me.chkVIP.Location = New System.Drawing.Point(68, 134)
+        Me.chkVIP.Margin = New System.Windows.Forms.Padding(4)
         Me.chkVIP.Name = "chkVIP"
-        Me.chkVIP.Size = New System.Drawing.Size(46, 24)
+        Me.chkVIP.Size = New System.Drawing.Size(61, 30)
         Me.chkVIP.TabIndex = 6
-        Me.chkVIP.Text = "&VIP:"
+        Me.chkVIP.Text = "&New:"
         Me.chkVIP.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CustomerToolTip.SetToolTip(Me.chkVIP, "Check to make the customer a VIP.")
+        Me.CustomerToolTip.SetToolTip(Me.chkVIP, "Check if the car is new.")
         Me.chkVIP.UseVisualStyleBackColor = True
         '
         'lvwCustomers
         '
         Me.lvwCustomers.CheckBoxes = True
-        Me.lvwCustomers.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.colVIP, Me.colID, Me.colTitle, Me.colFirstName, Me.colLastName})
+        Me.lvwCustomers.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.colNew, Me.colID, Me.colMake, Me.colModel, Me.colYear, Me.colPrice})
         Me.lvwCustomers.FullRowSelect = True
         Me.lvwCustomers.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
-        Me.lvwCustomers.Location = New System.Drawing.Point(2, 108)
+        Me.lvwCustomers.Location = New System.Drawing.Point(3, 169)
+        Me.lvwCustomers.Margin = New System.Windows.Forms.Padding(4)
         Me.lvwCustomers.MultiSelect = False
         Me.lvwCustomers.Name = "lvwCustomers"
-        Me.lvwCustomers.Size = New System.Drawing.Size(330, 246)
+        Me.lvwCustomers.Size = New System.Drawing.Size(439, 302)
         Me.lvwCustomers.TabIndex = 7
-        Me.CustomerToolTip.SetToolTip(Me.lvwCustomers, "Select a customer to modify.")
+        Me.CustomerToolTip.SetToolTip(Me.lvwCustomers, "Select a car to modify.")
         Me.lvwCustomers.UseCompatibleStateImageBehavior = False
         Me.lvwCustomers.View = System.Windows.Forms.View.Details
         '
-        'colVIP
+        'colNew
         '
-        Me.colVIP.Text = "VIP"
+        Me.colNew.Text = "New"
+        Me.colNew.Width = 50
         '
         'colID
         '
         Me.colID.Text = "ID"
+        Me.colID.Width = 32
         '
-        'colTitle
+        'colMake
         '
-        Me.colTitle.Text = "Title"
+        Me.colMake.Text = "Make"
+        Me.colMake.Width = 80
         '
-        'colFirstName
+        'colModel
         '
-        Me.colFirstName.Text = "FirstName"
+        Me.colModel.Text = "Model"
+        Me.colModel.Width = 92
         '
-        'colLastName
+        'colYear
         '
-        Me.colLastName.Text = "Last Name"
+        Me.colYear.Text = "Year"
         '
         'lbResult
         '
         Me.lbResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lbResult.Location = New System.Drawing.Point(2, 357)
+        Me.lbResult.Location = New System.Drawing.Point(3, 475)
+        Me.lbResult.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbResult.Name = "lbResult"
-        Me.lbResult.Size = New System.Drawing.Size(330, 60)
+        Me.lbResult.Size = New System.Drawing.Size(440, 74)
         Me.lbResult.TabIndex = 8
         Me.CustomerToolTip.SetToolTip(Me.lbResult, "Success or Error message will appear here.")
         '
-        'frmCustomerList
+        'Label1
+        '
+        Me.Label1.Location = New System.Drawing.Point(16, 73)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(88, 16)
+        Me.Label1.TabIndex = 12
+        Me.Label1.Text = "&Year: "
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Mr.", "Mrs.", "Miss.", "Ms.", "Mstr.", "Dr."})
+        Me.ComboBox1.Location = New System.Drawing.Point(112, 73)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(160, 24)
+        Me.ComboBox1.TabIndex = 13
+        Me.CustomerToolTip.SetToolTip(Me.ComboBox1, "Select the car's year.")
+        '
+        'colPrice
+        '
+        Me.colPrice.Text = "Price"
+        Me.colPrice.Width = 117
+        '
+        'frmCarInventory
         '
         Me.AcceptButton = Me.btnEnter
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnReset
-        Me.ClientSize = New System.Drawing.Size(334, 452)
+        Me.ClientSize = New System.Drawing.Size(445, 587)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.lbResult)
         Me.Controls.Add(Me.lvwCustomers)
         Me.Controls.Add(Me.chkVIP)
@@ -204,11 +252,12 @@ Partial Class frmCustomerList
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnEnter)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "frmCustomerList"
+        Me.Name = "frmCarInventory"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Customer List"
+        Me.Text = "Car Inventory"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -226,10 +275,13 @@ Partial Class frmCustomerList
     Friend WithEvents chkVIP As CheckBox
     Friend WithEvents lvwCustomers As ListView
     Friend WithEvents colID As ColumnHeader
-    Friend WithEvents colFirstName As ColumnHeader
-    Friend WithEvents colLastName As ColumnHeader
-    Friend WithEvents colVIP As ColumnHeader
-    Friend WithEvents colTitle As ColumnHeader
+    Friend WithEvents colModel As ColumnHeader
+    Friend WithEvents colYear As ColumnHeader
+    Friend WithEvents colNew As ColumnHeader
+    Friend WithEvents colMake As ColumnHeader
     Friend WithEvents CustomerToolTip As ToolTip
     Friend WithEvents lbResult As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents colPrice As ColumnHeader
 End Class

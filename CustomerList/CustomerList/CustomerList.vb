@@ -8,7 +8,7 @@ Option Strict On
 ''' Description     Application to keep a list of customers and a little information that describes their importance.
 ''' </summary>
 
-Public Class frmCustomerList
+Public Class frmCarInventory
 
     Private customerList As New SortedList                                 ' collection of all the customerList in the list
     Private currentCustomerIdentificationNumber As String = String.Empty ' current selected customer identification number
