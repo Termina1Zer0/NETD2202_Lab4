@@ -22,57 +22,64 @@ CustomerList
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="M:CustomerList.Customer.#ctor">
+<member name="M:CustomerList.Car.#ctor">
  <summary>
- Constructor - Default - creates a new customer object
+ Constructor - Default - creates a new car object
  </summary>
 </member>
-<member name="M:CustomerList.Customer.#ctor(System.String,System.String,System.String,System.Boolean)">
+<member name="M:CustomerList.Car.#ctor(System.String,System.String,System.String,System.Double,System.Boolean)">
  <summary>
- Constructor - Parameterized - creates a new customer object
+ Constructor - Parameterized - creates a new car object
  </summary>
- <param name="title"></param>
- <param name="firstName"></param>
- <param name="lastName"></param>
- <param name="veryImportantPersonStatus"></param>
+ <param name="make"></param>
+ <param name="model"></param>
+ <param name="year"></param>
+ <param name="price"></param>
+ <param name="newStatus"></param>
 </member>
-<member name="P:CustomerList.Customer.Count">
+<member name="P:CustomerList.Car.Count">
  <summary>
- Count ReadOnly Property - Gets the number of customers that have been instantiated/created
- </summary>
- <returns>Integer</returns>
-</member>
-<member name="P:CustomerList.Customer.IdentificationNumber">
- <summary>
- IdentificationNumber ReadOnly Property - Gets a specific customers identification number
+ Count ReadOnly Property - Gets the number of cars that have been instantiated/created
  </summary>
  <returns>Integer</returns>
 </member>
-<member name="P:CustomerList.Customer.VeryImportantPersonStatus">
+<member name="P:CustomerList.Car.IdentificationNumber">
  <summary>
- VeryImportantPersonStatus Property - >Gets and Sets the Very Important Person status of a customer
+ IdentificationNumber ReadOnly Property - Gets a specific cars identification number
+ </summary>
+ <returns>Integer</returns>
+</member>
+<member name="P:CustomerList.Car.NewStatus">
+ <summary>
+ NewStatus Property - >Gets and Sets the New status of a car
  </summary>
  <returns>Boolean</returns>
 </member>
-<member name="P:CustomerList.Customer.Title">
+<member name="P:CustomerList.Car.Make">
  <summary>
- Title property - Gets and Sets the title of a customer
+ Make property - Gets and Sets the make of a car
  </summary>
  <returns>String</returns>
 </member>
-<member name="P:CustomerList.Customer.FirstName">
+<member name="P:CustomerList.Car.Model">
  <summary>
- FirstName property - Gets and Sets the first name of a customer
+ Model property - Gets and Sets the model of a car
  </summary>
  <returns>String</returns>
 </member>
-<member name="P:CustomerList.Customer.LastName">
+<member name="P:CustomerList.Car.Year">
  <summary>
- LastName property - Gets and Sets the last name of a customer
+ Year property - Gets and Sets the year of a car
  </summary>
  <returns>String</returns>
 </member>
-<member name="M:CustomerList.Customer.GetSalutation">
+<member name="P:CustomerList.Car.Price">
+ <summary>
+ Price property - Gets and Sets the price of a car
+ </summary>
+ <returns>String</returns>
+</member>
+<member name="M:CustomerList.Car.GetSalutation">
  <summary>
  GetSalutation is a function that a salutation based on the private properties within the class scope
  </summary>
@@ -80,20 +87,20 @@ CustomerList
 </member>
 <member name="T:CustomerList.frmCarInventory">
  <summary>
- Author Name:    Alfred Massardo
- Project Name:   CustomerList
- Date:           05-Jan-2018
- Description     Application to keep a list of customers and a little information that describes their importance.
+ Author Name:    Alfred Massardo and Tyler Segovia
+ Project Name:   CarInventory
+ Date:           12-Mar-2019
+ Description     Application to keep a list of cars and a little information that describes their importance.
  </summary>
 </member>
 <member name="M:CustomerList.frmCarInventory.btnEnter_Click(System.Object,System.EventArgs)">
  <summary>
  btnEnter_Click - Will validate that the data entered into the controls is appropriate.
-                - Once the data is validated a customer object will be create using the  
-                - parameterized constructor. It will also insert the new customer object
-                - into the customerList collection. It will also check to see if the data in
+                - Once the data is validated a car object will be create using the  
+                - parameterized constructor. It will also insert the new car object
+                - into the carList collection. It will also check to see if the data in
                 - the controls has been selected from the listview by the user. In that case
-                - it will need to update the data in the specific customer object and the 
+                - it will need to update the data in the specific car object and the 
                 - listview as well.
  </summary>
  <param name="sender">Object</param>
@@ -127,17 +134,17 @@ CustomerList
  <param name="sender"></param>
  <param name="e"></param>
 </member>
-<member name="M:CustomerList.frmCarInventory.lvwCustomers_ItemCheck(System.Object,System.Windows.Forms.ItemCheckEventArgs)">
+<member name="M:CustomerList.frmCarInventory.lvwCars_ItemCheck(System.Object,System.Windows.Forms.ItemCheckEventArgs)">
  <summary>
- lvwCustomers_ItemCheck - used to prevent the user from checking the check box in the list view
+ lvwCars_ItemCheck - used to prevent the user from checking the check box in the list view
                         - if it is not in edit mode
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
 </member>
-<member name="M:CustomerList.frmCarInventory.lvwCustomers_SelectedIndexChanged(System.Object,System.EventArgs)">
+<member name="M:CustomerList.frmCarInventory.lvwCars_SelectedIndexChanged(System.Object,System.EventArgs)">
  <summary>
- lvwCustomers_SelectedIndexChanged - when the user selected a row in the list it will populate the fields for editing
+ lvwCars_SelectedIndexChanged - when the user selected a row in the list it will populate the fields for editing
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

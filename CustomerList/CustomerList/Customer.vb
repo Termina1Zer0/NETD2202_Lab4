@@ -1,116 +1,132 @@
 ﻿Option Strict On
-Public Class Customer
+Public Class Car
 
 
-    Private Shared customerCount As Integer                 ' static or shared private variable to hold the number of customers
-    Private customerIdentificationNumber As Integer = 0     ' private variable to hold the customer's identification number
-    Private customertTitle As String = String.Empty         ' private variable to hold the customer's title
-    Private customertFirstName As String = String.Empty     ' private variable to hold the customer's first name
-    Private customertLastName As String = String.Empty      ' private variable to hold the customer's last name
-    Private customertVeryImportantPersonStatus As Boolean = False              ' private variable to hold the customer's status
+    Private Shared carCount As Integer                 ' static or shared private variable to hold the number of cars
+    Private carIdentificationNumber As Integer = 0     ' private variable to hold the car's identification number
+    Private cartMake As String = String.Empty          ' private variable to hold the car's make
+    Private cartModel As String = String.Empty         ' private variable to hold the car's model
+    Private cartYear As String = String.Empty          ' private variable to hold the car's year
+    Private cartPrice As Double = 0                   ' private variable to hold the car's price
+    Private cartNewStatus As Boolean = False           ' private variable to hold the car's status
 
     ''' <summary>
-    ''' Constructor - Default - creates a new customer object
+    ''' Constructor - Default - creates a new car object
     ''' </summary>
     Public Sub New()
 
-        customerCount += 1      ' increment the shared/static variable counter by 1
-        customerIdentificationNumber = customerCount ' assign the customers id
+        carCount += 1      ' increment the shared/static variable counter by 1
+        carIdentificationNumber = carCount ' assign the cars id
 
     End Sub
 
     ''' <summary>
-    ''' Constructor - Parameterized - creates a new customer object
+    ''' Constructor - Parameterized - creates a new car object
     ''' </summary>
-    ''' <param name="title"></param>
-    ''' <param name="firstName"></param>
-    ''' <param name="lastName"></param>
-    ''' <param name="veryImportantPersonStatus"></param>
-    Public Sub New(title As String, firstName As String, lastName As String, veryImportantPersonStatus As Boolean)
+    ''' <param name="make"></param>
+    ''' <param name="model"></param>
+    ''' <param name="year"></param>
+    ''' <param name="price"></param>
+    ''' <param name="newStatus"></param>
+    Public Sub New(make As String, model As String, year As String, price As Double, newStatus As Boolean)
 
         ' call the other constructor 
-        ' to set the customer count and
-        ' to set the customer id
+        ' to set the car count and
+        ' to set the car id
         Me.New()
 
 
-        customertTitle = title          ' set the customer title
-        customertFirstName = firstName  ' set the customer first name
-        customertLastName = lastName    ' set the customer last name
-        customertVeryImportantPersonStatus = veryImportantPersonStatus        ' set the customer status
+        cartMake = make          ' set the car make
+        cartModel = model        ' set the car model
+        cartYear = year          ' set the car year
+        cartPrice = price        ' set the car price
+        cartNewStatus = newStatus        ' set the car status
 
     End Sub
 
 
     ''' <summary>
-    ''' Count ReadOnly Property - Gets the number of customers that have been instantiated/created
+    ''' Count ReadOnly Property - Gets the number of cars that have been instantiated/created
     ''' </summary>
     ''' <returns>Integer</returns>
     Public ReadOnly Property Count() As Integer
         Get
-            Return customerCount
+            Return carCount
         End Get
     End Property
 
     ''' <summary>
-    ''' IdentificationNumber ReadOnly Property - Gets a specific customers identification number
+    ''' IdentificationNumber ReadOnly Property - Gets a specific cars identification number
     ''' </summary>
     ''' <returns>Integer</returns>
     Public ReadOnly Property IdentificationNumber() As Integer
         Get
-            Return customerIdentificationNumber
+            Return carIdentificationNumber
         End Get
     End Property
 
     ''' <summary>
-    ''' VeryImportantPersonStatus Property - >Gets and Sets the Very Important Person status of a customer
+    ''' NewStatus Property - >Gets and Sets the New status of a car
     ''' </summary>
     ''' <returns>Boolean</returns>
-    Public Property VeryImportantPersonStatus() As Boolean
+    Public Property NewStatus() As Boolean
         Get
-            Return customertVeryImportantPersonStatus
+            Return cartNewStatus
         End Get
         Set(ByVal value As Boolean)
-            customertVeryImportantPersonStatus = value
+            cartNewStatus = value
         End Set
     End Property
 
     ''' <summary>
-    ''' Title property - Gets and Sets the title of a customer
+    ''' Make property - Gets and Sets the make of a car
     ''' </summary>
     ''' <returns>String</returns>
-    Public Property Title() As String
+    Public Property Make() As String
         Get
-            Return customertTitle
+            Return cartMake
         End Get
         Set(ByVal value As String)
-            customertTitle = value
+            cartMake = value
         End Set
     End Property
 
     ''' <summary>
-    ''' FirstName property - Gets and Sets the first name of a customer
+    ''' Model property - Gets and Sets the model of a car
     ''' </summary>
     ''' <returns>String</returns>
-    Public Property FirstName() As String
+    Public Property Model() As String
         Get
-            Return customertFirstName
+            Return cartModel
         End Get
         Set(ByVal value As String)
-            customertFirstName = value
+            cartModel = value
         End Set
     End Property
 
     ''' <summary>
-    ''' LastName property - Gets and Sets the last name of a customer
+    ''' Year property - Gets and Sets the year of a car
     ''' </summary>
     ''' <returns>String</returns>
-    Public Property LastName() As String
+    Public Property Year() As String
         Get
-            Return customertLastName
+            Return cartYear
         End Get
         Set(ByVal value As String)
-            customertLastName = value
+            cartYear = value
+        End Set
+    End Property
+
+    ''' <summary>
+    ''' Price property - Gets and Sets the price of a car
+    ''' </summary>
+    ''' <returns>String</returns>
+    Public Property Price() As Double
+        Get
+            Return cartPrice
+        End Get
+        Set(ByVal value As Double)
+            cartPrice = value
         End Set
     End Property
 
@@ -120,9 +136,8 @@ Public Class Customer
     ''' <returns>String</returns>
     Public Function GetSalutation() As String
 
-        Return "Hi my name is " & customertTitle & " " & customertFirstName & " " & customertLastName & ", " & IIf(customertVeryImportantPersonStatus = True, "I am a VIP", "I am not a VIP").ToString()
+        Return "This " & If(cartNewStatus = True, "new ", "used ").ToString() & cartYear & " " & cartMake & " " & cartModel & " is being sold for $" & cartPrice.ToString()
 
     End Function
-
 
 End Class
