@@ -79,9 +79,9 @@ CustomerList
  </summary>
  <returns>String</returns>
 </member>
-<member name="M:CustomerList.Car.GetSalutation">
+<member name="M:CustomerList.Car.GetCarData">
  <summary>
- GetSalutation is a function that a salutation based on the private properties within the class scope
+ GetCarData is a function that a salutation based on the private properties within the class scope
  </summary>
  <returns>String</returns>
 </member>

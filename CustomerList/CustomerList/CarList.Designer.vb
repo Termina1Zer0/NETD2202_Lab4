@@ -52,7 +52,7 @@ Partial Class frmCarInventory
         Me.btnEnter.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEnter.Name = "btnEnter"
         Me.btnEnter.Size = New System.Drawing.Size(100, 28)
-        Me.btnEnter.TabIndex = 9
+        Me.btnEnter.TabIndex = 11
         Me.btnEnter.Text = "&Enter"
         Me.CarToolTip.SetToolTip(Me.btnEnter, "Click to add a customer.")
         Me.btnEnter.UseVisualStyleBackColor = True
@@ -64,7 +64,7 @@ Partial Class frmCarInventory
         Me.btnReset.Margin = New System.Windows.Forms.Padding(4)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(100, 28)
-        Me.btnReset.TabIndex = 10
+        Me.btnReset.TabIndex = 12
         Me.btnReset.Text = "&Reset"
         Me.CarToolTip.SetToolTip(Me.btnReset, "Click to reset the screen.")
         Me.btnReset.UseVisualStyleBackColor = True
@@ -75,7 +75,7 @@ Partial Class frmCarInventory
         Me.btnExit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(100, 28)
-        Me.btnExit.TabIndex = 11
+        Me.btnExit.TabIndex = 13
         Me.btnExit.Text = "E&xit"
         Me.CarToolTip.SetToolTip(Me.btnExit, "Click to exit the application.")
         Me.btnExit.UseVisualStyleBackColor = True
@@ -95,7 +95,7 @@ Partial Class frmCarInventory
         Me.tbPrice.Margin = New System.Windows.Forms.Padding(4)
         Me.tbPrice.Name = "tbPrice"
         Me.tbPrice.Size = New System.Drawing.Size(160, 22)
-        Me.tbPrice.TabIndex = 5
+        Me.tbPrice.TabIndex = 7
         Me.CarToolTip.SetToolTip(Me.tbPrice, "Type the car's price here.")
         '
         'cmbMake
@@ -137,7 +137,7 @@ Partial Class frmCarInventory
         Me.lbPrice.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbPrice.Name = "lbPrice"
         Me.lbPrice.Size = New System.Drawing.Size(88, 16)
-        Me.lbPrice.TabIndex = 4
+        Me.lbPrice.TabIndex = 6
         Me.lbPrice.Text = "&Price: "
         Me.lbPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
@@ -148,7 +148,7 @@ Partial Class frmCarInventory
         Me.chkNew.Margin = New System.Windows.Forms.Padding(4)
         Me.chkNew.Name = "chkNew"
         Me.chkNew.Size = New System.Drawing.Size(61, 30)
-        Me.chkNew.TabIndex = 6
+        Me.chkNew.TabIndex = 8
         Me.chkNew.Text = "&New:"
         Me.chkNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.CarToolTip.SetToolTip(Me.chkNew, "Check if the car is new.")
@@ -165,7 +165,7 @@ Partial Class frmCarInventory
         Me.lvwCars.MultiSelect = False
         Me.lvwCars.Name = "lvwCars"
         Me.lvwCars.Size = New System.Drawing.Size(439, 302)
-        Me.lvwCars.TabIndex = 7
+        Me.lvwCars.TabIndex = 9
         Me.CarToolTip.SetToolTip(Me.lvwCars, "Select a car to modify.")
         Me.lvwCars.UseCompatibleStateImageBehavior = False
         Me.lvwCars.View = System.Windows.Forms.View.Details
@@ -206,7 +206,7 @@ Partial Class frmCarInventory
         Me.lbResult.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbResult.Name = "lbResult"
         Me.lbResult.Size = New System.Drawing.Size(440, 74)
-        Me.lbResult.TabIndex = 8
+        Me.lbResult.TabIndex = 10
         Me.CarToolTip.SetToolTip(Me.lbResult, "Success or Error message will appear here.")
         '
         'cmbYear
@@ -218,7 +218,7 @@ Partial Class frmCarInventory
         Me.cmbYear.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbYear.Name = "cmbYear"
         Me.cmbYear.Size = New System.Drawing.Size(160, 24)
-        Me.cmbYear.TabIndex = 13
+        Me.cmbYear.TabIndex = 5
         Me.CarToolTip.SetToolTip(Me.cmbYear, "Select the car's year.")
         '
         'lbYear
@@ -227,7 +227,7 @@ Partial Class frmCarInventory
         Me.lbYear.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbYear.Name = "lbYear"
         Me.lbYear.Size = New System.Drawing.Size(88, 16)
-        Me.lbYear.TabIndex = 12
+        Me.lbYear.TabIndex = 4
         Me.lbYear.Text = "&Year: "
         Me.lbYear.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '

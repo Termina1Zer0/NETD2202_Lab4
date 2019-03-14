@@ -296,7 +296,7 @@ Public Class frmCarInventory
         tbPrice.Text = car.Price.ToString()             ' get the make and set the combo box
         chkNew.Checked = car.NewStatus                  ' get the new status and set the combo box
 
-        lbResult.Text = car.GetSalutation()
+        lbResult.Text = car.GetCarData()
 
 
     End Sub

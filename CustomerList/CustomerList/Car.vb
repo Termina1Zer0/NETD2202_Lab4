@@ -7,7 +7,7 @@ Public Class Car
     Private cartMake As String = String.Empty          ' private variable to hold the car's make
     Private cartModel As String = String.Empty         ' private variable to hold the car's model
     Private cartYear As String = String.Empty          ' private variable to hold the car's year
-    Private cartPrice As Double = 0                   ' private variable to hold the car's price
+    Private cartPrice As Double = 0                    ' private variable to hold the car's price
     Private cartNewStatus As Boolean = False           ' private variable to hold the car's status
 
     ''' <summary>
@@ -131,10 +131,10 @@ Public Class Car
     End Property
 
     ''' <summary>
-    ''' GetSalutation is a function that a salutation based on the private properties within the class scope
+    ''' GetCarData is a function that a salutation based on the private properties within the class scope
     ''' </summary>
     ''' <returns>String</returns>
-    Public Function GetSalutation() As String
+    Public Function GetCarData() As String
 
         Return "This " & If(cartNewStatus = True, "new ", "used ").ToString() & cartYear & " " & cartMake & " " & cartModel & " is being sold for $" & cartPrice.ToString()
 
